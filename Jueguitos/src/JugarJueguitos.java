@@ -1,8 +1,7 @@
 import javax.swing.*;
 import java.util.InputMismatchException;
-import java.util.Random;
 
-public class JugarJueguitos extends AdivinarNumero {
+public class JugarJueguitos {
 
     public static boolean estado = false;
 
@@ -16,16 +15,21 @@ public class JugarJueguitos extends AdivinarNumero {
                int menu = Integer.parseInt(JOptionPane.showInputDialog
                        ("Ingrese el numero del juego que desea jugar:\n\n"
                        + "1. Adivina el numero\n"
-                       + "2. Salir"));
+                       + "2. Adivina la palabra\n"
+                       + "3. Salir"));
 
                switch (menu){
 
                    case 1:
 
-                       adivinarNumero();
+                       AdivinarNumero.adivinarNumero();
                        break;
 
                    case 2:
+
+                       Salvado.salvado();
+
+                   case 3:
 
                        estado = true;
                        break;
