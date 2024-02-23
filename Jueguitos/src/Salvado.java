@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 import java.util.InputMismatchException;
 import java.util.Random;
 
@@ -24,6 +25,7 @@ public class Salvado {
                     case 1:
 
                         nivelBalbuceo();
+                        break;
 
                     case 2:
 
@@ -80,21 +82,20 @@ public class Salvado {
         // Crear un array de caracteres para representar la palabra oculta
         char[] palabraOculta = new char[palabra.length()];
         for(int i = 0; i < palabraOculta.length; i++){
-            palabraOculta[i] = '*';
+            palabraOculta[i] = '☺';
         }
 
         // Contador de intentos restantes, intentos sera igual al doble de letras
         int intentos = palabra.length() * 2;
         while (intentos > 0) {
-            // Pedir al usuario que ingrese una letra
-            String letraUsuario = JOptionPane.showInputDialog(null,
-            "Adivina la palabra: " + new String(palabraOculta) + "\nTienes "
-                    + intentos + " intentos restantes.\nIngresa una letra:");
 
-            // Validar que el usuario haya ingresado solo una letra
-            if (letraUsuario.length() != 1) {
-                JOptionPane.showMessageDialog(null, "Ingresa una sola letra.");
-                continue; // Saltar al siguiente ciclo
+            String letraUsuario = JOptionPane.showInputDialog("Adivina la palabra: " + new String(palabraOculta) + "\n"
+                                    + "Tienes: " + intentos + " intentos\n"+ "Ingresa una letra");
+
+            if (letraUsuario.length() != 1){
+
+                JOptionPane.showMessageDialog(
+    null,"Ingrese solo una letra tramposin","CUIDADITO",JOptionPane.WARNING_MESSAGE);
             }
 
             // Obtener la letra ingresada por el usuario

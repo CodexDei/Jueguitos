@@ -1,11 +1,16 @@
 import javax.swing.*;
+import javax.swing.plaf.FontUIResource;
+import java.awt.*;
 import java.util.InputMismatchException;
 
 public class JugarJueguitos {
 
     public static boolean estado = false;
 
+
     public static void main(String[] args) {
+
+    UIManager.put("OptionPane.messageFont", new FontUIResource(new Font("Dialog", Font.PLAIN, 20)));
 
 
        do {
@@ -28,6 +33,7 @@ public class JugarJueguitos {
                    case 2:
 
                        Salvado.salvado();
+                       break;
 
                    case 3:
 
