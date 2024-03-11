@@ -17,13 +17,23 @@ public class JugarJueguitos {
 
            try{
 
-               int menu = Integer.parseInt(JOptionPane.showInputDialog
+               String menu = JOptionPane.showInputDialog
                        ("Ingrese el numero del juego que desea jugar:\n\n"
-                       + "1. Adivina el numero\n"
-                       + "2. Adivina la palabra\n"
-                       + "3. Salir"));
+                       + "1. Adivina numero\n"
+                       + "2. Adivina texto\n"
+                       + "3. Salir");
 
-               switch (menu){
+                   if (menu.isBlank()
+                   ){
+                JOptionPane.showMessageDialog(null,
+                "No puede ingresar un valor en blanco o vacio, ingrese un numero del menu",
+                        "INGRESE UN VALOR VALIDO",JOptionPane.WARNING_MESSAGE);
+                continue;
+            }
+
+               int opcionMenu = Integer.parseInt(menu);
+
+               switch (opcionMenu){
 
                    case 1:
 
