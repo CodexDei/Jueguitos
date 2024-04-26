@@ -20,7 +20,7 @@ public class Salvado {
 
                 String menu = JOptionPane.showInputDialog("Ingrese una opcion valida:\n\n"
                         + "1. Jugar Salvado\n"
-                        + "2. Salir");
+                        + "2. Salir").trim();
 
                 if (menu.isBlank() || menu == null){
                     JOptionPane.showMessageDialog(null,
@@ -103,7 +103,7 @@ public class Salvado {
         while (intentos > 0) {
 
             String letraUsuario = JOptionPane.showInputDialog("NIVEL BALBUCEO\n" + "Adivina la palabra: "
-                    + new String(palabraOculta) + "\n" + "Tienes: " + intentos + " intentos\n" + "Ingresa una letra");
+                    + new String(palabraOculta) + "\n" + "Tienes: " + intentos + " intentos\n" + "Ingresa una letra").trim();
 
             //si ingresa un vacio o espacio
             if (letraUsuario.isBlank()){
@@ -224,7 +224,7 @@ public class Salvado {
             String letraUsuario = JOptionPane.showInputDialog("NIVEL ESTUDIANTE DE ESPAÑOL\n"
                     + "PUNTAJE ACUMULADO: " + acumulacionPuntaje + "\n" + "Intentos: " + intentos + "\n"
                     + "Adivina la Palabra: " + new String(palabraOculta) + "\n"
-                    + "Ingrese una letra: (si es un nombre la primera letra es mayuscula)");
+                    + "Ingrese una letra: (si es un nombre la primera letra es mayuscula)").trim();
 
             if (letraUsuario.isBlank()){
                 JOptionPane.showMessageDialog(null,
@@ -340,7 +340,7 @@ public class Salvado {
         while (intentos > 0) {
 
             String letraUsuario = JOptionPane.showInputDialog("NIVEL LINGÜISTA\n" + "Adivina la palabra: "
-                    + new String(palabraOculta) + "\n" + "Tienes: " + intentos + " intentos\n" + "Ingresa una letra");
+                    + new String(palabraOculta) + "\n" + "Tienes: " + intentos + " intentos\n" + "Ingresa una letra").trim();
 
             if (letraUsuario.isBlank()){
                 JOptionPane.showMessageDialog(null,

@@ -21,7 +21,7 @@ public class JugarJueguitos {
                        ("Ingrese el numero del juego que desea jugar:\n\n"
                        + "1. Adivina numero\n"
                        + "2. Adivina texto\n"
-                       + "3. Salir");
+                       + "3. Salir").trim();
 
                    if (menu.isBlank()
                    ){
