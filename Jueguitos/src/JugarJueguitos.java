@@ -57,11 +57,13 @@ public class JugarJueguitos {
 
            }catch (InputMismatchException e){
 
+                e.printStackTrace();
                JOptionPane.showMessageDialog(
    null, "ERROR, Ingrese una opcion valida", "ERROR",JOptionPane.WARNING_MESSAGE);
 
            }catch (Exception e){
 
+               e.printStackTrace();
                JOptionPane.showMessageDialog(null,"ERROR: "+ e.getMessage(),"ERROR",JOptionPane.WARNING_MESSAGE);
            }
 

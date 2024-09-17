@@ -9,7 +9,6 @@ public class Salvado {
     public static int puntaje = 0;
     public static int acumulacionPuntaje = 0;
     public static int bonus = 0;
-
     public static StringBuilder mensaje;
 
     public static void salvado() {
@@ -58,6 +57,8 @@ public class Salvado {
 
                 JOptionPane.showMessageDialog(null,
                         "ERROR: " + e.getMessage(), "ERROR", JOptionPane.WARNING_MESSAGE);
+
+                e.printStackTrace();
             }
 
         } while (!estado);
