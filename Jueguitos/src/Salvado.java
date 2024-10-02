@@ -161,7 +161,7 @@ public class Salvado {
                     mensaje.append("NIVEL DEL JUGADOR: 'PROFE LENGUAJE' (por lograrlo a los " + intentos + " intentos" + "\n");
                     puntaje = 500;
 
-                } else if ((intentos < palabra.length()) && (intentos > 1)) {
+                } else if ((intentos <= palabra.length()) && (intentos > 1)) {
 
                     mensaje.append("NIVEL DEL JUGADOR: 'ESTUDIANTE DE ESPAÑOL' (por lograrlo a los " + intentos + " intentos" + "\n");
                     puntaje = 250;
@@ -270,7 +270,7 @@ public class Salvado {
                     mensaje.append("NIVEL DEL JUGADOR: 'LINGÜISTA' (por lograrlo SIN gastar intentos)\n");
                     puntaje = 2000;
 
-                } else if ( intentos < palabra.length() && (intentos > 1) ) {
+                } else if ( intentos <= palabra.length() && (intentos > 1) ) {
 
                     mensaje.append("NIVEL DEL JUGADOR: 'PROFE LENGUAJE' (por lograrlo a los " + intentos + " intentos" + "\n");
                     puntaje = 1000;
@@ -302,6 +302,8 @@ public class Salvado {
             JOptionPane.showMessageDialog(null,
             "PUNTAJE: " + puntaje + "\n" + " PUNTAJE ACUMULADO: " + acumulacionPuntaje + "\n");
         }
+        //Reiniciar juego
+//        salvado();
     }
 
     public static void nivelDificil(){
@@ -391,7 +393,7 @@ public class Salvado {
                     mensaje.append("NIVEL DEL JUGADOR: 'LINGÜISTA' (por lograrlo SIN gastar intentos)\n");
                     puntaje = 3000;
 
-                } else if (intentos < (palabra.length() / 4) && (intentos > 1)) {
+                } else if (intentos <= (palabra.length() / 4) && (intentos > 1)) {
 
                     mensaje.append("NIVEL DEL JUGADOR: 'PROFE LENGUAJE' (por lograrlo a los " + intentos + " intentos" + "\n");
                     puntaje = 1500;
