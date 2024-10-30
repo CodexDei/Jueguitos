@@ -1,15 +1,16 @@
+package org.codexdei.juegos;
+
 import javax.swing.*;
-import java.awt.*;
 import java.util.InputMismatchException;
 import java.util.Random;
 
 public class Salvado {
 
-    public static boolean estado = false;
-    public static int puntaje = 0;
-    public static int acumulacionPuntaje = 0;
-    public static int bonus = 0;
-    public static StringBuilder mensaje;
+    private static boolean estado = false;
+    private static int puntaje = 0;
+    private static int acumulacionPuntaje = 0;
+    private static int bonus = 0;
+    private static StringBuilder mensaje;
 
     public static void salvado() {
 
@@ -18,7 +19,7 @@ public class Salvado {
             try {
 
                 String menu = JOptionPane.showInputDialog("Ingrese una opcion valida:\n\n"
-                        + "1. Jugar Salvado\n"
+                        + "1. Jugar org.codexdei.juegos.Salvado\n"
                         + "2. Salir").trim();
 
                 if (menu.isBlank() || menu == null){

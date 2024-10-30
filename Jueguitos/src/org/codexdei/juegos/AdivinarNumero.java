@@ -1,13 +1,18 @@
+package org.codexdei.juegos;
+
+import org.codexdei.exceptions.IngresoDatosExceptions;
+
 import javax.swing.*;
 import java.util.InputMismatchException;
 import java.util.Random;
 
 public class AdivinarNumero {
 
-    public static boolean estadoAdivinarNumero = false;
-    public static int puntaje = 0;
-    public static int bonus = 0;
-    public static int acumulacionPuntaje = 0;
+    private static boolean estadoAdivinarNumero = false;
+    private static int puntaje = 0;
+    private static int bonus = 0;
+    private static int acumulacionPuntaje = 0;
+
     public static void adivinarNumero() {
 
         do {
@@ -47,7 +52,7 @@ public class AdivinarNumero {
         } while (!estadoAdivinarNumero);
 
     }
-    public static void nivelHuevo() {
+    public static void nivelHuevo() throws IngresoDatosExceptions {
 
 
         Random random = new Random();
@@ -74,8 +79,7 @@ public class AdivinarNumero {
 
             if (intentos <= 0) {
 
-                JOptionPane.showMessageDialog(null,
-                        "El numero debe ser mayor a cero", "Mayor a Cero", JOptionPane.WARNING_MESSAGE);
+                throw new IngresoDatosExceptions("El numero debe ser mayor a cero", "Mayor a Cero");
             }
 
             if (intentosExagerados >= 3 && intentos > 5) {
@@ -197,7 +201,7 @@ public class AdivinarNumero {
             }
     }
 
-    public static void nivelPollo() {
+    public static void nivelPollo() throws IngresoDatosExceptions {
 
         Random random = new Random();
         int numeroUsuario[];
@@ -345,7 +349,7 @@ public class AdivinarNumero {
         }
     }
 
-    public static void nivelGallo() {
+    public static void nivelGallo() throws IngresoDatosExceptions {
 
         Random random = new Random();
         int numeroUsuario[];

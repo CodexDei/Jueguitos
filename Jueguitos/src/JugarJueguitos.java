@@ -1,3 +1,6 @@
+import org.codexdei.juegos.AdivinarNumero;
+import org.codexdei.juegos.Salvado;
+
 import javax.swing.*;
 import javax.swing.plaf.FontUIResource;
 import java.awt.*;
@@ -5,7 +8,7 @@ import java.util.InputMismatchException;
 
 public class JugarJueguitos {
 
-    public static boolean estado = false;
+    private static boolean estado = false;
 
 
     public static void main(String[] args) {
